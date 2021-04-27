@@ -119,7 +119,9 @@ LUTs = pred[:, 0]*T + \
   pred[:, 53]*y**2*z**3 + \
   pred[:, 54]*y*z**4 + \
   pred[:, 55]*z**5 
-        
+
+_, result = self.trilinear_(LUTs, img)
+result = result + coef * img
 ```
 
 # sdr2hdr
