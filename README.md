@@ -127,3 +127,26 @@ LUTs = pred[:, 0]*T + \
 ## dataset
 - [yinfans](https://www.yinfans.me/)
 - [bugutv](https://www.bugutv.cn/4kmovie)
+
+## 8bit->10bit
+
+```
+os.system(f'/usr/local/bin/ffmpeg -r {fps} -y -f image2 -i {output_path}/%08d_{style_list[style_id]}.png \
+    -c:v libx265 -x265-params high-tier=1:profile=main10 \
+    -b:v 10M -pix_fmt yuv420p10le -c:a aac -color_primaries bt2020 -colorspace bt2020_ncl -color_trc smpte2084 \
+    {os.path.join(output_path, video_name)}')
+```
+
+## 10bit->8bit
+
+```
+/usr/local/bin/ffmpeg -ss 00:02:55 -to 00:03:10 -y -i ./hdr/Avengers3.mkv \
+-pix_fmt yuv420p -color_primaries bt709 -colorspace bt709 -color_trc bt709 \
+./Avengers3_sdr.mp4
+```
+
+## 10bit->rgb48
+
+```
+/usr/local/bin/ffmpeg -ss 00:00:00 -to 00:02:00 -y -i ./hdr/hdr.mkv -pix_fmt rgb48 ./rgb48/%012d.png
+```
