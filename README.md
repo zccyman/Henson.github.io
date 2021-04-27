@@ -128,7 +128,7 @@ LUTs = pred[:, 0]*T + \
 - [yinfans](https://www.yinfans.me/)
 - [bugutv](https://www.bugutv.cn/4kmovie)
 
-## 8bit->10bit
+## BT709->BT2020
 
 ```
 os.system(f'/usr/local/bin/ffmpeg -r {fps} -y -f image2 -i {output_path}/%08d_{style_list[style_id]}.png \
@@ -137,7 +137,7 @@ os.system(f'/usr/local/bin/ffmpeg -r {fps} -y -f image2 -i {output_path}/%08d_{s
     {os.path.join(output_path, video_name)}')
 ```
 
-## 10bit->8bit
+## BT2020->BT709
 
 ```
 /usr/local/bin/ffmpeg -ss 00:02:55 -to 00:03:10 -y -i ./hdr/Avengers3.mkv \
