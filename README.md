@@ -1,6 +1,6 @@
 # zccyman.github.io
 
-# meshgrid
+# 3DLUT meshgrid
 
 ```
 import torch
