@@ -120,7 +120,7 @@ LUTs = pred[:, 0]*T + \
   pred[:, 54]*y*z**4 + \
   pred[:, 55]*z**5 
 
-_, result = self.trilinear_(LUTs, img)
+_, result = trilinear_(LUTs, img)
 result = result + coef * img
 ```
 
