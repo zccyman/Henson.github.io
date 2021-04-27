@@ -140,13 +140,14 @@ os.system(f'/usr/local/bin/ffmpeg -r {fps} -y -f image2 -i {output_path}/%08d_{s
 ## BT2020->BT709
 
 ```
-/usr/local/bin/ffmpeg -ss 00:02:55 -to 00:03:10 -y -i ./hdr/Avengers3.mkv \
+/usr/local/bin/ffmpeg -ss 00:02:55 -to 00:03:10 -y -i ./hdr/videos/Avengers3.mkv \
 -pix_fmt yuv420p -color_primaries bt709 -colorspace bt709 -color_trc bt709 \
 ./Avengers3_sdr.mp4
 ```
 
-## 10bit->rgb48
+## 10bit->rgb48 or 8bit->rgb48
 
 ```
-/usr/local/bin/ffmpeg -ss 00:00:00 -to 00:02:00 -y -i ./hdr/hdr.mkv -pix_fmt rgb48 ./rgb48/%012d.png
+/usr/local/bin/ffmpeg -ss 00:00:00 -to 00:02:00 -y -i ./hdr/videos/hdr.mkv -pix_fmt rgb48 ./hdr/images/%012d.png
+/usr/local/bin/ffmpeg -ss 00:00:00 -to 00:02:00 -y -i ./hdr/videos/hdr.mkv -pix_fmt rgb48 ./sdr/images/%012d.png
 ```
