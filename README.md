@@ -124,7 +124,7 @@ _, result = trilinear_(LUTs, img)
 result = result + coef * img
 ```
 
-# sdr2hdr
+# sdr2hdr/hdr2sdr
 
 ## dataset
 - [yinfans](https://www.yinfans.me/)
