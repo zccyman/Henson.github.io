@@ -4,7 +4,8 @@
 
 ## fivek dataset
 - [Preparing-data-for-the-MIT-Adobe-FiveK-Dataset-with-Lightroom](https://github.com/yuanming-hu/exposure/wiki/Preparing-data-for-the-MIT-Adobe-FiveK-Dataset-with-Lightroom)
-
+- [DeepLPF](https://github.com/sjmoran/DeepLPF)
+- [Image-Adaptive-3DLUT](https://github.com/HuiZeng/Image-Adaptive-3DLUT)
 
 # 3DLUT meshgrid
 
