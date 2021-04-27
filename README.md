@@ -122,6 +122,8 @@ LUTs = pred[:, 0]*T + \
 
 _, result = trilinear_(LUTs, img)
 result = result + coef * img
+- 1080p 20ms/frame
+- 4k 67ms/frame
 ```
 
 # sdr2hdr/hdr2sdr
