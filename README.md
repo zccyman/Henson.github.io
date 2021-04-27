@@ -7,7 +7,7 @@
 - [DeepLPF](https://github.com/sjmoran/DeepLPF)
 - [Image-Adaptive-3DLUT](https://github.com/HuiZeng/Image-Adaptive-3DLUT)
 
-# 3DLUT meshgrid
+## 3DLUT meshgrid
 
 ```
 import torch
@@ -121,3 +121,9 @@ LUTs = pred[:, 0]*T + \
   pred[:, 55]*z**5 
         
 ```
+
+# sdr2hdr
+
+## dataset
+- [yinfans](https://www.yinfans.me/)
+- [bugutv](https://www.bugutv.cn/4kmovie)
